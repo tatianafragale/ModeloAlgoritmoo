@@ -12,3 +12,5 @@ public class PLayerr : MonoBehaviour
             weapon.Shoot();
     }
 }
+
+//se escapo una r aca dea
