@@ -4,13 +4,12 @@ using UnityEngine;
 
 public abstract class Bullet : MonoBehaviour
 {
-    [SerializeField] protected float _speed;
+    [SerializeField] public float _speed = 200;
+    [SerializeField] public int damageBullet = 10;
 
-    public int damageBullet = 10;
-
-    public void Initialize()
+    public void Initialize(Flywaight flyweight)
     {
-        Debug.Log("Bullet");
+        _speed = flyweight.speed;
     }
 
 }
