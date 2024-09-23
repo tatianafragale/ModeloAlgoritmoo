@@ -4,31 +4,39 @@ using UnityEngine;
 
 public class ShipSpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab;
+    
     public float spawnInterval = 5.0f; //Tiempo entre spawns
     public Transform[] spawnPoints; //Index de puntos de spawn para la nave
+    private Transform ship;
 
-    private float nextSpawnTime;
-
+    private void Start()
+    {
+        ship = GameObject.FindGameObjectWithTag("Big Ship").transform; 
+        
+    }
 
     private void Update()
     {
-        if(Time.time >= nextSpawnTime)
+        spawnInterval -= Time.deltaTime;
+
+        if(spawnInterval <= 0)
         {
-            SpawnEnemy();
-            nextSpawnTime = Time.time + spawnInterval;
-
+            ShipTp();
+            spawnInterval = 5;
+            
         }
+
+
     }
 
-
-    void SpawnEnemy()
+    private void ShipTp()
     {
-        int randomIndex = Random.Range(0, spawnPoints.Length); //Elige un punto de spawn aleatorio
-        Transform spawnPoint = spawnPoints[randomIndex];
+        int tpShip = Random.Range(0, spawnPoints.Length);
+        ship.transform.position = spawnPoints[tpShip].position;
 
-        Instantiate(enemyPrefab, spawnPoint.position, Quaternion.identity); //Crea la nave en el punto seleccionado
+
+
     }
-
+    
 
 }
