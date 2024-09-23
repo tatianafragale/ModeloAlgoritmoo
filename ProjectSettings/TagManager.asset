@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - Big Ship
   layers:
   - Default
   - TransparentFX

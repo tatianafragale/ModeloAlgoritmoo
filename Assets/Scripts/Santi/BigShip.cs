@@ -10,24 +10,27 @@ public class BigShip : MonoBehaviour
 
 
     private Transform player;
-    private float nextFireTime;
+    [SerializeField] private float nextFireTime = 0.5f;
 
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform; //Busca al jugador
-        nextFireTime = Time.time;
+        
     }
 
 
     void Update()
     {
-        
-        if(Time.time >= nextFireTime)
+        nextFireTime -= Time.deltaTime;
+
+        if(nextFireTime <= 0)
         {
             ShootAtPlayer();
-            nextFireTime = Time.time;
+            nextFireTime = 0.5f;
+
         }
+        
 
 
     }
@@ -36,13 +39,15 @@ public class BigShip : MonoBehaviour
     {
         if(player != null)
         {
-            GameObject bullet = Instantiate(bulletprefab, firePoint.position, Quaternion.identity);
+            BulletShip bullet = Instantiate(bulletprefab, firePoint.position, Quaternion.identity).GetComponent<BulletShip>();
             Vector3 direction = (player.position - firePoint.position).normalized; // Calcula la direccion hacia el jugador
-            bullet.GetComponent<Rigidbody>().velocity = direction * 5.0f;
+            bullet.direction = direction;
+            bullet.startMoving();
         }
 
     }
 
+    
 
 
 }
