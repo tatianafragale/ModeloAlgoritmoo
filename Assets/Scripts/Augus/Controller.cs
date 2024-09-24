@@ -7,7 +7,6 @@ public class Controller: MonoBehaviour
     private Model _model;  
     private View _view;    
     public Weapon weapon;
-
     public float delayBala = 0.5f; // Tiempo entre disparos en segundos
     private float nextFireTime = 0f; // Momento en que se puede disparar nuevamente
 
@@ -16,6 +15,7 @@ public class Controller: MonoBehaviour
     {
         _model = GetComponent<Model>();
         _view = GetComponent<View>();
+
     }
 
     private void Update()
@@ -29,6 +29,10 @@ public class Controller: MonoBehaviour
             // Actualiza la posición del jugador usando la View
             _view.UpdatePosition(movement);
         }
+        else
+        {
+            _view.shipBody.velocity = Vector3.zero;
+        }
 
        
         if (Input.GetKeyDown(KeyCode.Space) && Time.time >= nextFireTime)
@@ -36,5 +40,7 @@ public class Controller: MonoBehaviour
             weapon.Shoot();
             nextFireTime = Time.time + delayBala; // Actualiza el tiempo del próximo disparo
         }
+
+
     }
 }
