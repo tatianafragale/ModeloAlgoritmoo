@@ -9,6 +9,6 @@ public class Model: MonoBehaviour
     // Método para obtener la posición del jugador
     public Vector3 GetMovement(Vector3 direction)
     {
-        return direction * speed * 1000 * Time.deltaTime;
+        return direction * speed * 2000 * Time.deltaTime;
     }
 }
