@@ -2023,9 +2023,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   scoreValue: 100
+  respawnBigShip: 1
   bulletprefab: {fileID: 1538021460228100845, guid: 29f252a9f80de4a41a7696f4b54a4e4f, type: 3}
   firePoint: {fileID: 1113900053}
   fireRate: 1000
+  respawnTime: 5
   nextFireTime: 0.5
 --- !u!135 &1642337501
 SphereCollider:

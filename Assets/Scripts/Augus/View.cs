@@ -11,4 +11,5 @@ public class View: MonoBehaviour
     {
         transform.position += movement;
     }
+
 }

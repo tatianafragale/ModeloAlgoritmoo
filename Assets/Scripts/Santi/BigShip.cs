@@ -5,7 +5,7 @@ public class BigShip : Entity
     public GameObject bulletprefab;
     public Transform firePoint;
     public float fireRate = 2.0f; //Tiempo entre los disparos
-
+    public float respawnTime = 5f; //Tiempo de respawn de la nave
 
     private Transform player;
     [SerializeField] private float nextFireTime = 0.5f;
@@ -14,6 +14,7 @@ public class BigShip : Entity
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform; //Busca al jugador
+        isDead += deadRespawn; //Cuando llegue el mensaje de "mori", se llama a la funcion de respawn
         
     }
 
@@ -45,7 +46,26 @@ public class BigShip : Entity
 
     }
 
-    
+    public void deadRespawn()
+    {
+        gameObject.SetActive(false);
+        Invoke(nameof(Respawn), respawnTime);
+
+
+
+    }
+
+    public void Respawn()
+    {
+        gameObject.SetActive(true);
+        health = 100;
+
+
+
+
+    }
+
+
 
 
 }
