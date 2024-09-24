@@ -6,7 +6,11 @@ public class Controller: MonoBehaviour
 {
     private Model _model;  
     private View _view;    
-    public Weapon weapon;  
+    public Weapon weapon;
+
+    public float delayBala = 0.5f; // Tiempo entre disparos en segundos
+    private float nextFireTime = 0f; // Momento en que se puede disparar nuevamente
+
 
     private void Start()
     {
@@ -27,9 +31,10 @@ public class Controller: MonoBehaviour
         }
 
        
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time >= nextFireTime)
         {
             weapon.Shoot();
+            nextFireTime = Time.time + delayBala; // Actualiza el tiempo del próximo disparo
         }
     }
 }
