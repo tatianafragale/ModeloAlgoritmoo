@@ -24,7 +24,7 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    //Dispara el evento cuando un enemigo es impactado por la bala/balas
+    //Dispara el evento cuando un enemigo es impactado por la bala/balas (pensar vfx/sfx)
     public static void EnemyHit()
     {
         if (OnEnemyHit != null)

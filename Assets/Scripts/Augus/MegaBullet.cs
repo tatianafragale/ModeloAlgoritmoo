@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class NormalBullet : Bullet
+public class MegaBullet : Bullet
 {
     private void Start()
     {
-        Initialize(FlywaightPointer.NormalBullet); // Usamos el Flyweight
+        Initialize(FlywaightPointer.MegaBullet); // Usamos el Flyweight
     }
 
     void Update()
@@ -19,7 +19,7 @@ public class NormalBullet : Bullet
             Entity enemy = other.GetComponent<Entity>();
             if (enemy != null)
             {
-                enemy.TakeDamage(damageBullet);
+                enemy.TakeDamage(damageBullet * 2); // MegaBullet hace más daño
                 Destroy(gameObject);
             }
         }

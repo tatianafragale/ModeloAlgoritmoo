@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Controller: MonoBehaviour
 {
-    private Model _model;  // Referencia al Model
-    private View _view;    // Referencia a la View
-    public Weapon weapon;  // Asigna tu arma en el Inspector
+    private Model _model;  
+    private View _view;    
+    public Weapon weapon;
+
+    public float delayBala = 0.5f; // Tiempo entre disparos en segundos
+    private float nextFireTime = 0f; // Momento en que se puede disparar nuevamente
+
 
     private void Start()
     {
@@ -16,7 +20,7 @@ public class Controller: MonoBehaviour
 
     private void Update()
     {
-        // Capturamos el input de movimiento horizontal (izquierda y derecha)
+        //input de movimiento horizontal (izquierda y derecha)
         float horizontal = Input.GetAxis("Horizontal");
         if (horizontal != 0)
         {
@@ -26,10 +30,11 @@ public class Controller: MonoBehaviour
             _view.UpdatePosition(movement);
         }
 
-        // Si se presiona la barra espaciadora, dispara
-        if (Input.GetKeyDown(KeyCode.Space))
+       
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time >= nextFireTime)
         {
-            weapon.Shoot();  // Llama al método de disparo del Weapon
+            weapon.Shoot();
+            nextFireTime = Time.time + delayBala; // Actualiza el tiempo del próximo disparo
         }
     }
 }

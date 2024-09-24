@@ -4,18 +4,29 @@ using UnityEngine;
 
 public class Rifle : Weapon
 {
-    public Transform bulletSpawnPoint; //Donde sale la bala del player (el nuevo transform)
-
+    public Transform bulletSpawnPoint;
+    private int shotsFired = 0;
 
     public override void Shoot()
     {
-        Bullet newBullet = _factory.Create(); //Crea una nueva bala
+        shotsFired++;
 
-        // Establece la posición y dirección de la bala
-        newBullet.transform.position = bulletSpawnPoint.position; //Usa el punto de disparo
-        newBullet.transform.rotation = bulletSpawnPoint.rotation; //Usa la rotación del punto de disparo
+        Bullet newBullet;
 
-        EventManager.BulletFired(); //El evento de disparo de bala
+        if (shotsFired >= 10)
+        {
+            newBullet = _factory.Create(1); // MegaBullet
+            shotsFired = 0;
+        }
+        else
+        {
+            newBullet = _factory.Create(0); // NormalBullet
+        }
 
+        
+        newBullet.transform.position = bulletSpawnPoint.position;
+        newBullet.transform.rotation = bulletSpawnPoint.rotation;
+
+        EventManager.BulletFired();
     }
 }
