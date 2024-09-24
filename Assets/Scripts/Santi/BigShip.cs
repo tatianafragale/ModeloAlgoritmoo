@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BigShip : MonoBehaviour
+public class BigShip : Entity
 {
     public GameObject bulletprefab;
     public Transform firePoint;

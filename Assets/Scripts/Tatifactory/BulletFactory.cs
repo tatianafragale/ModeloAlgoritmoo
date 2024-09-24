@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.Pool;
 
 public class BulletFactory : Factory<Bullet>
 {
-    public Bullet prefab;
+    public NormalBullet normalPrefab;
+    public MegaBullet megaPrefab;
     ObjectPool<Bullet> _pool;
-
 
     private void Awake()
     {
@@ -16,10 +13,18 @@ public class BulletFactory : Factory<Bullet>
 
     Bullet InstantiatePrefab()
     {
-        return Instantiate(prefab);
+        return Instantiate(normalPrefab);
     }
-    public override Bullet Create()
+
+    public override Bullet Create(int bulletType = 0)
     {
-        return Instantiate(prefab);
+        if (bulletType == 0)
+        {
+            return Instantiate(normalPrefab);
+        }
+        else
+        {
+            return Instantiate(megaPrefab);
+        }
     }
 }

@@ -1,16 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class Bullet : MonoBehaviour
 {
-    [SerializeField] protected float _speed;
+     public float _speed;
+     public int damageBullet;
+    private float timeToDestroy = 1f;
 
-    public int damageBullet = 10;
-
-    public void Initialize()
+    public void Initialize(Flywaight flyweight)
     {
-        Debug.Log("Bullet");
+        _speed = flyweight.speed; 
+        damageBullet = flyweight.damage;
+        Destroy(this.gameObject, timeToDestroy);
     }
 
 }
