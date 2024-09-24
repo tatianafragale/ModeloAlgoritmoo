@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MegaBullet : Bullet
@@ -21,7 +19,16 @@ public class MegaBullet : Bullet
             Entity enemy = other.GetComponent<Entity>();
             if (enemy != null)
             {
-                enemy.TakeDamage(damageBullet * 2); // MegaBullet doble de daño
+                enemy.TakeDamage(damageBullet * 2); // MegaBullet hace más daño
+                Destroy(gameObject);
+            }
+        }
+        else if (other.CompareTag("Big Ship"))
+        {
+            Entity enemy = other.GetComponent<Entity>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damageBullet * 2); // MegaBullet hace más daño
                 Destroy(gameObject);
             }
         }

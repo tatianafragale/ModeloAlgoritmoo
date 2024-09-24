@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class NormalBullet : Bullet
@@ -22,6 +20,15 @@ public class NormalBullet : Bullet
             if (enemy != null)
             {
                 enemy.TakeDamage(damageBullet);
+                Destroy(gameObject);
+            }
+        }
+        else if (other.CompareTag("Big Ship"))
+        {
+            Entity enemy = other.GetComponent<Entity>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damageBullet * 2); // MegaBullet hace más daño
                 Destroy(gameObject);
             }
         }
