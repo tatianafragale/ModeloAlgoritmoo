@@ -10,6 +10,6 @@ public static class FlywaightPointer
     public static readonly Flywaight MegaBullet = new Flywaight()
     {
         speed = 30,
-        damage = 10
+        damage = 15
     };
 }

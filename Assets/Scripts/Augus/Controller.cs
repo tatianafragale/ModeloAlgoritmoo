@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Controller: MonoBehaviour
 {
-    private Model _model;  // Referencia al Model
-    private View _view;    // Referencia a la View
-    public Weapon weapon;  // Asigna tu arma en el Inspector
+    private Model _model;  
+    private View _view;    
+    public Weapon weapon;  
 
     private void Start()
     {
@@ -16,7 +16,7 @@ public class Controller: MonoBehaviour
 
     private void Update()
     {
-        // Capturamos el input de movimiento horizontal (izquierda y derecha)
+        //input de movimiento horizontal (izquierda y derecha)
         float horizontal = Input.GetAxis("Horizontal");
         if (horizontal != 0)
         {
@@ -26,10 +26,10 @@ public class Controller: MonoBehaviour
             _view.UpdatePosition(movement);
         }
 
-        // Si se presiona la barra espaciadora, dispara
+       
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            weapon.Shoot();  // Llama al método de disparo del Weapon
+            weapon.Shoot();
         }
     }
 }
