@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour
     public int health = 100;  
     public int scoreValue = 50; //Puntos que sueltan al morir  
     public bool respawnBigShip = false;
-    public event Action isDead;
+    public event Action isDead; // Envia el mensaje de la accion de morir
 
     //Daño
     public virtual void TakeDamage(int damage)

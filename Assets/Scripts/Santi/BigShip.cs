@@ -46,13 +46,10 @@ public class BigShip : Entity
 
     }
 
-    public void deadRespawn()
+    public void deadRespawn() //Funcion para respawnear a la Big Ship
     {
         gameObject.SetActive(false);
         Invoke(nameof(Respawn), respawnTime);
-
-
-
     }
 
     public void Respawn()
@@ -60,12 +57,13 @@ public class BigShip : Entity
         gameObject.SetActive(true);
         health = 100;
 
-
-
-
     }
 
 
+    public void OnDestroy()  
+    {
+        isDead-= deadRespawn;
 
+    }
 
 }

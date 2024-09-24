@@ -1857,6 +1857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 785996050}
+  shipBody: {fileID: 0}
 --- !u!114 &1187880253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1869,7 +1870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a566c715056ef3a4aa80aaf20d3c3f03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 5
 --- !u!114 &1187880254
 MonoBehaviour:
   m_ObjectHideFlags: 0
