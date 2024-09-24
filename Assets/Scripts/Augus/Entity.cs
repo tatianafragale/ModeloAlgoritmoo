@@ -7,6 +7,8 @@ public class Entity : MonoBehaviour
 {
     public int health = 100;  
     public int scoreValue = 50; //Puntos que sueltan al morir  
+    public bool respawnBigShip = false;
+    public event Action isDead;
 
     //Daño
     public virtual void TakeDamage(int damage)
@@ -25,8 +27,15 @@ public class Entity : MonoBehaviour
     {
         // Disparar el evento de que un enemigo ha sido destruido
         EventManager.TriggerEnemyKilled(scoreValue);
+        isDead.Invoke();
+        if(respawnBigShip == false)
+        {
+            Destroy(gameObject);
+        }
         
-        Destroy(gameObject);
     }
+
+
+
 
 }
