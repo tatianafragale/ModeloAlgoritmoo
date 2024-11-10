@@ -1,6 +1,6 @@
 {
     "items": [
-        { "language": "en", "key": "title", "value": "BATTLESHIPS" },
+        { "language": "en", "key": "title", "value": "SPACE WARDEN" },
         { "language": "en", "key": "menu_button", "value": "MAIN MENU" },
         { "language": "en", "key": "play_button", "value": "PLAY" },
         { "language": "en", "key": "options_button", "value": "OPTIONS" },
@@ -12,9 +12,11 @@
         { "language": "en", "key": "restart_button", "value": "RESTART" },
         { "language": "en", "key": "gameover", "value": "¡GAME OVER!" },
         { "language": "en", "key": "victory", "value": "¡YOU WIN!" },
+        { "language": "en", "key": "spanish_button", "value": "SPANISH" },
+        { "language": "en", "key": "english_button", "value": "ENGLISH" },
 
         
-        { "language": "es", "key": "title", "value": "BARCOS DE GUERRA" },
+        { "language": "es", "key": "title", "value": "GUARDIAN ESPACIAL" },
         { "language": "es", "key": "menu_button", "value": "MENU PRINCIPAL" },
         { "language": "es", "key": "play_button", "value": "JUGAR" },
         { "language": "es", "key": "options_button", "value": "OPCIONES" },
@@ -25,7 +27,9 @@
         { "language": "es", "key": "resume_button", "value": "REANUDAR" },
         { "language": "es", "key": "restart_button", "value": "REINICIAR" },
         { "language": "es", "key": "gameover", "value": "¡PERDISTE!" },
-        { "language": "es", "key": "victory", "value": "GANASTE!!" }
+        { "language": "es", "key": "victory", "value": "GANASTE!!" },
+        { "language": "es", "key": "spanish_button", "value": "CASTELLANO" },
+        { "language": "es", "key": "english_button", "value": "INGLES" }
 
     ]
 }
