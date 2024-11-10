@@ -10,8 +10,8 @@
         { "language": "en", "key": "pause_button", "value": "PAUSE" },
         { "language": "en", "key": "resume_button", "value": "RESUME" },
         { "language": "en", "key": "restart_button", "value": "RESTART" },
-        { "language": "en", "key": "gameover", "value": "¡GAME OVER!" },
-        { "language": "en", "key": "victory", "value": "¡YOU WIN!" },
+        { "language": "en", "key": "gameover", "value": "GAME OVER!" },
+        { "language": "en", "key": "victory", "value": "YOU WIN!" },
         { "language": "en", "key": "spanish_button", "value": "SPANISH" },
         { "language": "en", "key": "english_button", "value": "ENGLISH" },
 
@@ -26,7 +26,7 @@
         { "language": "es", "key": "pause_button", "value": "PAUSA" },
         { "language": "es", "key": "resume_button", "value": "REANUDAR" },
         { "language": "es", "key": "restart_button", "value": "REINICIAR" },
-        { "language": "es", "key": "gameover", "value": "¡PERDISTE!" },
+        { "language": "es", "key": "gameover", "value": "PERDISTE!" },
         { "language": "es", "key": "victory", "value": "GANASTE!!" },
         { "language": "es", "key": "spanish_button", "value": "CASTELLANO" },
         { "language": "es", "key": "english_button", "value": "INGLES" }
