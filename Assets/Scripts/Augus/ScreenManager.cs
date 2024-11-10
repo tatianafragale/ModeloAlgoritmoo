@@ -48,7 +48,7 @@ public class ScreenManager : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        ShowScreen(ScreenType.MainMenu);
+        SceneManager.LoadScene(1);
         Time.timeScale = 1;
     }
 
