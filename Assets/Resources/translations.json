@@ -1,0 +1,15 @@
+{
+    "items": [
+        { "language": "en", "key": "title", "value": "BATTLESHIPS" },
+        { "language": "en", "key": "play_button", "value": "PLAY" },
+        { "language": "en", "key": "options_button", "value": "OPTIONS" },
+        { "language": "en", "key": "quit_button", "value": "QUIT" },
+        { "language": "en", "key": "lenguage_button", "value": "LANGUAGE" },
+        
+        { "language": "es", "key": "title", "value": "BARCOS DE GUERRA" },
+        { "language": "es", "key": "play_button", "value": "JUGAR" },
+        { "language": "es", "key": "options_button", "value": "OPCIONES" },
+        { "language": "es", "key": "quit_button", "value": "SALIR" },
+        { "language": "es", "key": "lenguage_button", "value": "IDIOMA" }
+    ]
+}
