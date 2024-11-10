@@ -55,6 +55,11 @@ public class ScreenManager : MonoBehaviour
     public void GameOver()
     {
         ShowScreen(ScreenType.GameOver);
-        Time.timeScale = 0; // Detén el tiempo en Game Over
+        Time.timeScale = 0; 
+    }
+    public void Victory()
+    {
+        ShowScreen(ScreenType.EndScreen);
+        Time.timeScale = 0; 
     }
 }

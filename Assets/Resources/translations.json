@@ -1,19 +1,21 @@
 {
     "items": [
         { "language": "en", "key": "title", "value": "BATTLESHIPS" },
-        { "language": "en", "key": "mainmenu_button", "value": "MAIN MENU" },
+        { "language": "en", "key": "menu_button", "value": "MAIN MENU" },
         { "language": "en", "key": "play_button", "value": "PLAY" },
         { "language": "en", "key": "options_button", "value": "OPTIONS" },
         { "language": "en", "key": "quit_button", "value": "QUIT" },
         { "language": "en", "key": "lenguage_button", "value": "LANGUAGE" },
         { "language": "en", "key": "back_button", "value": "BACK" },
-        { "language": "es", "key": "pause_button", "value": "PAUSE" },
-        { "language": "es", "key": "resume_button", "value": "RESUME" },
-        { "language": "es", "key": "restart_button", "value": "RESTART" },
+        { "language": "en", "key": "pause_button", "value": "PAUSE" },
+        { "language": "en", "key": "resume_button", "value": "RESUME" },
+        { "language": "en", "key": "restart_button", "value": "RESTART" },
+        { "language": "en", "key": "gameover", "value": "¡GAME OVER!" },
+        { "language": "en", "key": "victory", "value": "¡YOU WIN!" },
 
         
         { "language": "es", "key": "title", "value": "BARCOS DE GUERRA" },
-        { "language": "en", "key": "mainmenu_button", "value": "MENU PRINCIPAL" },
+        { "language": "es", "key": "menu_button", "value": "MENU PRINCIPAL" },
         { "language": "es", "key": "play_button", "value": "JUGAR" },
         { "language": "es", "key": "options_button", "value": "OPCIONES" },
         { "language": "es", "key": "quit_button", "value": "SALIR" },
@@ -21,7 +23,9 @@
         { "language": "es", "key": "back_button", "value": "ATRAS" },
         { "language": "es", "key": "pause_button", "value": "PAUSA" },
         { "language": "es", "key": "resume_button", "value": "REANUDAR" },
-        { "language": "es", "key": "resume_button", "value": "REINICIAR" }
+        { "language": "es", "key": "restart_button", "value": "REINICIAR" },
+        { "language": "es", "key": "gameover", "value": "¡PERDISTE!" },
+        { "language": "es", "key": "victory", "value": "GANASTE!!" }
 
     ]
 }

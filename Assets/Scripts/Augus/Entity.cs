@@ -19,6 +19,11 @@ public class Entity : MonoBehaviour
         if (health <= 0)
         {
             Death();
+            ScreenManager screenManager = FindObjectOfType<ScreenManager>();
+            if (screenManager != null)
+            {
+                screenManager.Victory();
+            }
         }
     }
 
