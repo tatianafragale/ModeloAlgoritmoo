@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c48801f94c433040abfbb337ea3e627, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  key: lenguage_button
+  key: back_button
 --- !u!114 &948424098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2612,9 +2612,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 985213401}
-        m_TargetAssemblyTypeName: LanguageButton, Assembly-CSharp
-        m_MethodName: SetSpanish
+      - m_Target: {fileID: 604294994}
+        m_TargetAssemblyTypeName: ScreenManager, Assembly-CSharp
+        m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

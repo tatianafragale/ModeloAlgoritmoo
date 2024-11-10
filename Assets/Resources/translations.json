@@ -5,11 +5,17 @@
         { "language": "en", "key": "options_button", "value": "OPTIONS" },
         { "language": "en", "key": "quit_button", "value": "QUIT" },
         { "language": "en", "key": "lenguage_button", "value": "LANGUAGE" },
+        { "language": "en", "key": "back_button", "value": "BACK" },
+        { "language": "es", "key": "pause_button", "value": "PAUSE" },
+
         
         { "language": "es", "key": "title", "value": "BARCOS DE GUERRA" },
         { "language": "es", "key": "play_button", "value": "JUGAR" },
         { "language": "es", "key": "options_button", "value": "OPCIONES" },
         { "language": "es", "key": "quit_button", "value": "SALIR" },
-        { "language": "es", "key": "lenguage_button", "value": "IDIOMA" }
+        { "language": "es", "key": "lenguage_button", "value": "IDIOMA" },
+        { "language": "es", "key": "back_button", "value": "ATRAS" },
+        { "language": "es", "key": "pause_button", "value": "PAUSA" }
+
     ]
 }
