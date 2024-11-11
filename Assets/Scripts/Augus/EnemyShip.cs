@@ -16,7 +16,7 @@ public class EnemyShip : Entity
         transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
     }
 
-    private void OnTriggerEnter(Collider other) //Choca con el player y se destuye
+    private void OnTriggerEnter(Collider other) //Choca con el player y se destruye
     {
         
         if (other.CompareTag("Player")) 

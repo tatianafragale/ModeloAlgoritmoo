@@ -122,6 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 30
   scoreValue: 50
+  respawnBigShip: 0
   moveSpeed: 5
   lifetime: 15
 --- !u!54 &3875658814428785620
