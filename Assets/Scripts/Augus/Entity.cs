@@ -19,6 +19,11 @@ public class Entity : MonoBehaviour
         if (health <= 0)
         {
             Death();
+            ScreenManager screenManager = FindObjectOfType<ScreenManager>();
+            if (screenManager != null)
+            {
+                screenManager.Victory();
+            }
         }
     }
 
@@ -28,11 +33,7 @@ public class Entity : MonoBehaviour
         // Disparar el evento de que un enemigo ha sido destruido
         EventManager.TriggerEnemyKilled(scoreValue);
         isDead.Invoke();
-        if(respawnBigShip == false)
-        {
-            Destroy(gameObject);
-        }
-        
+        Destroy(gameObject);
     }
 
 
