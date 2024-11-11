@@ -6,13 +6,15 @@ public class EnemyShip : Entity
     public float lifetime = 10f; // Tiempo que el meteorito esta vivo
 
     private void Start()
-    {        
+    {
+        isDead += OnDeath;
+
         Destroy(gameObject, lifetime);
     }
 
     void Update()
     {
-        //movimiento del meteorito anashe
+        //movimiento del meteorito
         transform.position += Vector3.forward * moveSpeed * Time.deltaTime;
     }
 
@@ -25,4 +27,8 @@ public class EnemyShip : Entity
         }
     }
 
+    private void OnDeath()
+    {
+        Debug.Log("El meteorito ha muerto: " + gameObject.name); //Podríamos colocar VFX 
+    }
 }
