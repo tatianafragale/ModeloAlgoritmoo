@@ -63,7 +63,11 @@ public class BigShip : Entity
     public void OnDestroy()  
     {
         isDead-= deadRespawn;
-
+        ScreenManager screenManager = FindObjectOfType<ScreenManager>();
+        if (screenManager != null)
+        {
+            screenManager.Victory(); //Panel de Victoria cuando muere la BigShip
+        }
     }
 
 }
