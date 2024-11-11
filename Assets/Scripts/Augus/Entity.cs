@@ -33,11 +33,7 @@ public class Entity : MonoBehaviour
         // Disparar el evento de que un enemigo ha sido destruido
         EventManager.TriggerEnemyKilled(scoreValue);
         isDead.Invoke();
-        if(respawnBigShip == false)
-        {
-            Destroy(gameObject);
-        }
-        
+        Destroy(gameObject);
     }
 
 
