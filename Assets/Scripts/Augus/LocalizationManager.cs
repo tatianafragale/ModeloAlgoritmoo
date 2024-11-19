@@ -51,9 +51,7 @@ public class LocalizationManager : MonoBehaviour
                 localizedText[item.language][item.key] = item.value;
             }
         }
-        else
-        {
-        }
+        
     }
 
 
