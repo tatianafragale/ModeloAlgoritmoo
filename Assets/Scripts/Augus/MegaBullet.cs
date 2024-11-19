@@ -9,7 +9,7 @@ public class MegaBullet : Bullet
 
     void Update()
     {
-        transform.position += transform.forward * _speed * Time.deltaTime;
+        transform.position += transform.forward * FlywaightPointer.MegaBullet.speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -19,7 +19,7 @@ public class MegaBullet : Bullet
             Entity enemy = other.GetComponent<Entity>();
             if (enemy != null)
             {
-                enemy.TakeDamage(damageBullet * 2); // MegaBullet hace más daño
+                enemy.TakeDamage(FlywaightPointer.MegaBullet.damage * 2); // MegaBullet hace más daño
                 Destroy(gameObject);
             }
         }
@@ -28,7 +28,7 @@ public class MegaBullet : Bullet
             Entity enemy = other.GetComponent<Entity>();
             if (enemy != null)
             {
-                enemy.TakeDamage(damageBullet * 2); // MegaBullet hace más daño
+                enemy.TakeDamage(FlywaightPointer.MegaBullet.damage * 2); // MegaBullet hace más daño
                 Destroy(gameObject);
             }
         }
